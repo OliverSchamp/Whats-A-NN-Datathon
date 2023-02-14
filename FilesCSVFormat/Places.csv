@@ -1,0 +1,503 @@
+id,name,parent
+0,Zundert,213.0
+1,Limoges,214.0
+2,Paris,214.0
+3,Medellín,215.0
+4,Vesoul,216.0
+5,Leiden,217.0
+6,Baumgarten,218.0
+7,London,219.0
+8,Caprese,220.0
+9,Fuendetodos,221.0
+10,Boston,222.0
+11,Charenton-Saint-Maurice,223.0
+12,Albi,224.0
+13,Charlotte Amalie,225.0
+14,Venice,227.0
+15,East Bergholt,228.0
+16,Pieve di Cadore,229.0
+17,Solingen,230.0
+18,Tulln an der Donau,231.0
+19,Allegheny City,232.0
+20,near Florence,220.0
+21,Bourges,233.0
+22,Bordeaux,214.0
+23,Lumberville,232.0
+24,Bolton,234.0
+25,Hartford,235.0
+26,Newburgh,236.0
+27,Valencia,237.0
+28,Florence,220.0
+29,Bologna,238.0
+30,Ornans,239.0
+31,Milan,240.0
+32,Honfleur,214.0
+33,Canton,236.0
+34,Rouen,241.0
+35,Nineveh,242.0
+36,Breda or Breugel,
+37,Rue de Seine,2.0
+38,Grasse,214.0
+39,Feodosia,243.0
+40,Dorchester,10.0
+41,Scarborough,244.0
+42,Columbus,245.0
+43,Sudbury,228.0
+44,Greifswald,246.0
+45,Nantes,247.0
+46,Gruchy,248.0
+47,Liverpool,234.0
+48,Cuiseaux,249.0
+49,Valenciennes,214.0
+50,near Les Andelys,241.0
+51,Delft,250.0
+52,'s-Hertogenbosch,251.0
+53,Warnham,252.0
+54,Verona,
+55,Bordentown,253.0
+56,Dunfermline,254.0
+57,Kilimanoor,255.0
+58,La Rochelle,256.0
+59,York,219.0
+60,Stockholm,257.0
+61,Stockbridge,199.0
+62,Cincinnati,258.0
+63,Aschaffenburg,259.0
+64,Brussels,260.0
+65,Wimbledon,219.0
+66,Antwerp,261.0
+67,London 1681,
+68,Porvoo,262.0
+69,Great Marlow,263.0
+70,Kisszeben,264.0
+71,Anamosa,265.0
+72,Rome,
+73,Colmenar de Oreja,237.0
+74,Handsworth,266.0
+75,Warsaw,267.0
+76,Plympton,268.0
+77,Parma,240.0
+78,Ivančice,269.0
+79,Amsterdam,213.0
+80,Lewiston,270.0
+81,Ústí nad Labem,271.0
+82,Dronryp,272.0
+83,Seville,273.0
+84,[a] Vinci,
+85,Volpedo,274.0
+86,Coyoacán,276.0
+87,Great Neck,236.0
+88,Correggio,277.0
+89,Menzenschwand,278.0
+90,Chichester,279.0
+91,Marseille,
+92,Southampton,280.0
+93,Tournus,281.0
+94,Middenbeemster,217.0
+95,Stronach,282.0
+96,Feldsberg,283.0
+97,probably Venice,284.0
+98,Norwich,219.0
+99,Forlì,
+100,Taishan,285.0
+101,Swabia,286.0
+102,Neuruppin,287.0
+103,Montauban,288.0
+104,Madrid,237.0
+105,Münchenbuchsee,289.0
+106,Edo,290.0
+107,St John's Wood,7.0
+108,Caherconlish,291.0
+109,Lowell,222.0
+110,Les Cayes,292.0
+111,Cheshire,235.0
+112,Piacenza,293.0
+113,Oakland,294.0
+114,Lyon,214.0
+115,Beaugency,214.0
+116,Nancy,295.0
+117,Lübeck,296.0
+118,Naples,284.0
+119,Haarlem,213.0
+120,Berlin,297.0
+121,Philadelphia,232.0
+122,Bristol,219.0
+123,Radom,298.0
+124,Keppel Street,300.0
+125,Grenoble,214.0
+126,Trélon,301.0
+127,Udine,229.0
+128,Townhead,302.0
+129,Birmingham,219.0
+130,Reggio Calabria,284.0
+131,Boulogne-Billancourt,214.0
+132,Albano,284.0
+133,Mora,257.0
+134,Versailles,214.0
+135,Lovell,270.0
+136,Setauket,236.0
+137,Nolde,303.0
+138,Soest,305.0
+139,Brighton,279.0
+140,Springfield,306.0
+141,Le Cateau-Cambrésis,214.0
+142,New York City,
+143,Ins,289.0
+144,Maplewood,253.0
+145,Le Mans,214.0
+146,Namur,304.0
+147,Sant'Angelo in Vado,
+148,Tettenweis,259.0
+149,La Bassée,214.0
+150,Granvin,307.0
+151,Aguascalientes,308.0
+152,Munkács,309.0
+153,Cento,
+154,Champigné,310.0
+155,Monza,284.0
+156,Budapest,311.0
+157,Southwark,7.0
+158,Camerano,312.0
+159,Moscow,313.0
+160,either Fodele or Candia,314.0
+161,Ferrara,
+162,Whitefish Bay,315.0
+163,Madras,317.0
+164,Roxbury,222.0
+165,Stockwell,318.0
+166,Rotterdam,
+167,Troyes,214.0
+168,Baltimore,319.0
+169,Játiva,27.0
+170,Landshut,286.0
+171,Cork,320.0
+172,Abbey House,321.0
+173,Christiania,322.0
+174,Genoa,323.0
+175,Balle Mølle,324.0
+176,Free Imperial City of Frankfurt in the Holy Roman Empire,
+177,Wolgast,286.0
+178,Dublin,326.0
+179,Badoc,327.0
+180,Frankenthal,
+181,8th arrondissement of Paris,
+182,Montpellier,328.0
+183,Kiev,329.0
+184,Harrisburg,232.0
+185,Pitaru,330.0
+186,Bessines-sur-Gartempe,214.0
+187,Siegen,331.0
+188,Fontenay-aux-Roses,332.0
+189,Vienna,218.0
+190,Brașov,218.0
+191,Calvert County,319.0
+192,Whitechapel,7.0
+193,Vestre Aker,322.0
+194,Pratovecchio,284.0
+195,Fabriano,238.0
+196,Dordrecht,213.0
+197,Utrecht,333.0
+198,Chatham,334.0
+199,Edinburgh,
+200,Terheijden,213.0
+201,Sunderland,219.0
+202,Chevilly,289.0
+203,Libourne,
+204,Bayonne,214.0
+205,Senlis,335.0
+206,Venezia,
+207,Nice,336.0
+208,Lille,214.0
+209,Tournan-en-Brie,338.0
+210,Toulouse,339.0
+211,Messina,340.0
+212,Republic of Florence (present-day Tuscany,341.0
+213,Netherlands,
+214,France,
+215,Colombia,
+216,Haute-Saône,
+217,Dutch Republic,
+218,Austrian Empire,
+219,England,
+220,Republic of Florence,
+221,Aragon,
+222,Massachusetts,
+223,Île-de-France,
+224,Tarn,
+225,Saint Thomas,
+226,French Second Republic,
+227,Venetian Republic,
+228,Suffolk,
+229,Republic of Venice,
+230,Rhine Province,
+231,Austro-Hungarian Empire,
+232,Pennsylvania,
+233,Cher,
+234,Lancashire,
+235,Connecticut,
+236,New York,
+237,Spain,
+238,Papal States,
+239,Doubs,
+240,Duchy of Milan,
+241,Normandy,
+242,Indiana,
+243,Taurida,
+244,North Riding of Yorkshire,
+245,Ohio,
+246,Swedish Pomerania,
+247,July Monarchy,
+248,Gréville-Hague,
+249,Saône-et-Loire,
+250,Holland,
+251,Duchy of Brabant,
+252,West Sussex,
+253,New Jersey,
+254,Scotland,
+255,Travancore (present day Trivandrum,
+256,Kingdom of France,
+257,Sweden–Norway,
+258,OhioUnited States of America,
+259,Kingdom of Bavaria,
+260,Southern Netherlands,
+261,Spanish Netherlands,
+262,Grand Duchy of Finland,
+263,Buckinghamshire,
+264,Kingdom of Hungary,
+265,Iowa,
+266,Staffordshire,
+267,Poland[a],
+268,Devon,
+269,Margraviate of Moravia,
+270,Maine,
+271,Bohemia,
+272,Waadhoeke,
+273,Crown of Castile,
+274,Piedmont,
+275,Grand Duchy of Tuscany,
+276,Mexico City,308.0
+277,Duchy of Modena and Reggio,
+278,Black Forest,
+279,Sussex,
+280,Hampshire,
+281,Burgundy,
+282,Tyrol,
+283,Empire of Austria,
+284,Italy,
+285,Guangdong,
+286,Germany,
+287,Margraviate of Brandenburg,
+288,Languedoc,
+289,Switzerland,
+290,Japan,
+291,County Limerick,
+292,Saint-Domingue,
+293,Duchy of Parma,
+294,California,
+295,Meurthe-et-Moselle,
+296,Holy Roman Empire,
+297,Kingdom of Prussia,
+298,Congress Poland,
+299,Roman Republic(now Rome,
+300,Bloomsbury,
+301,Département du Nord,
+302,Glasgow,
+303,Province of Schleswig-Holstein,
+304,Belgium,
+305,Westphalia,
+306,Province of Pennsylvania,
+307,Hardangerfjord,
+308,Mexico,
+309,Kingdom of Hungary (now Mukachevo,
+310,Maine-et-Loire,
+311,Transleithania,
+312,Marche,
+313,Russian Empire,
+314,Crete,
+315,Wisconsin,
+316,Moskovsky Uyezd,
+317,British India,
+318,Surrey,
+319,Maryland,
+320,Ireland,
+321,Chertsey,
+322,Norway,
+323,Republic of Genoa,
+324,near Grenaa Denmark,
+325,Lombardy,
+326,County Dublin,
+327,Ilocos Norte,
+328,Hérault,
+329,Kiev Governorate,
+330,Dâmbovița County,
+331,Nassau-Dillenburg,
+332,Seine,
+333,Bishopric of Utrecht,
+334,Kent,
+335,Oise,
+336,Duchy of Savoy,
+337,Rhône,
+338,Seine-et-Marne,
+339,France[1],
+340,Kingdom of Sicily,
+341,Italy),
+342,Auvers-sur-Oise,214.0
+343,Cagnes-sur-Mer,214.0
+344,Giverny,214.0
+345,Chelsea,7.0
+346,Prouts Neck,270.0
+347,Saint-André-du-Bois,455.0
+348,Atuona,456.0
+349,Moret-sur-Loing,214.0
+350,Château de Beaufresne,458.0
+351,St. Augustine,459.0
+352,Santa Barbara,294.0
+353,Gennevilliers,214.0
+354,Bridge of Allan,254.0
+355,Cercedilla,237.0
+356,La Tour-de-Peilz,289.0
+357,Porto Ercole,461.0
+358,Deauville,214.0
+359,Limpsfield,318.0
+360,Ridgefield,235.0
+361,Louvre,2.0
+362,East Hampton,236.0
+363,Kensington,7.0
+364,Dresden,463.0
+365,Chenecey-Buillon,464.0
+366,Barbizon,465.0
+367,Marylebone,466.0
+368,La Baule,467.0
+369,Nogent-sur-Marne,468.0
+370,Orly,469.0
+371,Killearn Hospital,
+372,Attingal,470.0
+373,Falun,471.0
+374,90 Grove Street,472.0
+375,Frauenkirch-Wildboden [de],473.0
+376,Fulham,7.0
+377,Iowa City,265.0
+378,Eltham,475.0
+379,Cuernavaca,308.0
+380,Leicester Fields,7.0
+381,Casalmaggiore,229.0
+382,Prague,476.0
+383,Ixelles,304.0
+384,Ellsworth,270.0
+385,Staten Island,477.0
+386,Wiesbaden,478.0
+387,Clos Lucé,479.0
+388,Meudon,455.0
+389,Frankfurt am Main,478.0
+390,Epsom,318.0
+391,Acquigny,214.0
+392,Munich,
+393,Kew,219.0
+394,Hollywood,447.0
+395,Pozsony,480.0
+396,Arpajon,
+397,Muralto,289.0
+398,Penzance,482.0
+399,Falmouth,482.0
+400,Kraków,485.0
+401,Greenwich,7.0
+402,Ramsgate,334.0
+403,Buré,214.0
+404,Vésinet,214.0
+405,Varennes-Jarcy,214.0
+406,Seebüll [de],487.0
+407,Schaerbeek,304.0
+408,Covent Garden,219.0
+409,Menton,488.0
+410,Ibid.,
+411,Essonnes,214.0
+412,Balestrand,492.0
+413,Endenlich,478.0
+414,Le Cannet,488.0
+415,Bordighera,284.0
+416,Hyme House,493.0
+417,Neuilly-sur-Seine,214.0
+418,Toledo,237.0
+419,Mantua,
+420,Petrograd,313.0
+421,Amesbury,222.0
+422,Redhill,318.0
+423,Worcester,219.0
+424,Mergellina,118.0
+425,Leinsweiler,494.0
+426,Lower Halliford,219.0
+427,Volendam,213.0
+428,Voorburg,213.0
+429,Fredensborg,495.0
+430,Hamburg,286.0
+431,Newlyn,482.0
+432,British Hong Kong,
+433,Purbrook,280.0
+434,Frankfurt,
+435,Asnières-sur-Seine,
+436,Woodbury,235.0
+437,Elizabethtown,236.0
+438,Beaune-la-Rolande,214.0
+439,Leningrad,496.0
+440,St. Peter,497.0
+441,Câmpina,498.0
+442,Goa,
+443,La Route de Serra Capeou,414.0
+444,?,
+445,Herengracht,213.0
+446,Boca Grande,459.0
+447,Los Angeles,294.0
+448,Broadmoor Hospital,500.0
+449,Fronsac,
+450,Monchy-Saint-Éloi,214.0
+451,Villiers-le-Bel,501.0
+452,Spoleto,238.0
+453,Paris[1],
+454,Austria-Hungary,
+455,French Third Republic,
+456,Marquesas Islands,
+457,U.S.,
+458,near Paris,
+459,Florida,
+460,Republic of Venice (now Veneto,
+461,State of the Presidi,
+462,US,
+463,Kingdom of Saxony,
+464,Third French Republic,
+465,Île de France,
+466,Middlesex,
+467,Loire-Inférieure,
+468,[1] France,
+469,Val-de-Marne,
+470,Travancore,
+471,Sweden,
+472,New York CityNew York,
+473,Davos,
+474,Hungary,
+475,Victoria,
+476,Protectorate of Bohemia and Moravia,
+477,New York[1],
+478,German Empire,
+479,Amboise,
+480,Hungary  (today Bratislava,
+481,Province of Brandenburg,
+482,Cornwall,
+483,Polish–Lithuanian Commonwealth,
+484,Great Britain,
+485,Poland,
+486,Kingdom of Spain,
+487,Schleswig-Holstein,
+488,Alpes-Maritimes,
+489,United Kingdom,
+490,Kingdom of Italy,
+491,Weimar Republic,
+492,Sogn og Fjordane,
+493,Hampstead,
+494,Bavaria,
+495,Denmark,
+496,Russian SFSR,
+497,Minnesota,
+498,Romania,
+499,Second Polish Republic,
+500,Berkshire,
+501,Val-d'Oise,
