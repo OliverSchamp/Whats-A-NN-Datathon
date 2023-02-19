@@ -1,3 +1,10 @@
+# Command used to finetune the dataset:
+
+```bash
+accelerate launch --mixed_precision="fp16" train_text_to_image_lora.py --pretrained_model_name_or_path="CompVis/stable-diffusion-v1-4" --dataset_name="imagefolder_small" --caption_column="text" --resolution=512 --random_flip --train_batch_size=1 --num_train_epochs=4 --checkpointing_steps=5000 --learning_rate=1.2e-03 --lr_scheduler="constant" --lr_warmup_steps=0 --seed=36 --output_dir="sd-artwork-model-lora" --validation_prompt="Starry Night by Pierre Auguste Renoir" --enable_xformers_memory_efficient_attention --report_to="wandb"
+```
+
+
 # Stable Diffusion text-to-image fine-tuning
 
 The `train_text_to_image.py` script shows how to fine-tune stable diffusion model on your own dataset.
