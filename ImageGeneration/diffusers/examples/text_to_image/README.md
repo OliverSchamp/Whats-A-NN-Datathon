@@ -110,6 +110,12 @@ image = pipe(prompt="yoda").images[0]
 image.save("yoda-pokemon.png")
 ```
 
+# Command used to finetune the dataset:
+
+```bash
+accelerate launch --mixed_precision="fp16" train_text_to_image_lora.py --pretrained_model_name_or_path="CompVis/stable-diffusion-v1-4" --dataset_name="imagefolder_small" --caption_column="text" --resolution=512 --random_flip --train_batch_size=1 --num_train_epochs=4 --checkpointing_steps=5000 --learning_rate=1.2e-03 --lr_scheduler="constant" --lr_warmup_steps=0 --seed=36 --output_dir="sd-artwork-model-lora" --validation_prompt="Starry Night by Pierre Auguste Renoir" --enable_xformers_memory_efficient_attention --report_to="wandb"
+```
+
 ## Training with LoRA
 
 Low-Rank Adaption of Large Language Models was first introduced by Microsoft in [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685) by *Edward J. Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean Wang, Lu Wang, Weizhu Chen*.
@@ -187,55 +193,11 @@ image = pipe(prompt, num_inference_steps=30, guidance_scale=7.5).images[0]
 image.save("pokemon.png")
 ```
 
-## Training with Flax/JAX
-
-For faster training on TPUs and GPUs you can leverage the flax training example. Follow the instructions above to get the model and dataset before running the script.
-
-**___Note: The flax example doesn't yet support features like gradient checkpoint, gradient accumulation etc, so to use flax for faster training we will need >30GB cards or TPU v3.___**
-
-
-Before running the scripts, make sure to install the library's training dependencies:
-
-```bash
-pip install -U -r requirements_flax.txt
-```
-
-```bash
-export MODEL_NAME="duongna/stable-diffusion-v1-4-flax"
-export dataset_name="lambdalabs/pokemon-blip-captions"
-
-python train_text_to_image_flax.py \
-  --pretrained_model_name_or_path=$MODEL_NAME \
-  --dataset_name=$dataset_name \
-  --resolution=512 --center_crop --random_flip \
-  --train_batch_size=1 \
-  --mixed_precision="fp16" \
-  --max_train_steps=15000 \
-  --learning_rate=1e-05 \
-  --max_grad_norm=1 \
-  --output_dir="sd-pokemon-model" 
-```
-
-To run on your own training files prepare the dataset according to the format required by `datasets`, you can find the instructions for how to do that in this [document](https://huggingface.co/docs/datasets/v2.4.0/en/image_load#imagefolder-with-metadata).
-If you wish to use custom loading logic, you should modify the script, we have left pointers for that in the training script.
-
-```bash
-export MODEL_NAME="duongna/stable-diffusion-v1-4-flax"
-export TRAIN_DIR="path_to_your_dataset"
-
-python train_text_to_image_flax.py \
-  --pretrained_model_name_or_path=$MODEL_NAME \
-  --train_data_dir=$TRAIN_DIR \
-  --resolution=512 --center_crop --random_flip \
-  --train_batch_size=1 \
-  --mixed_precision="fp16" \
-  --max_train_steps=15000 \
-  --learning_rate=1e-05 \
-  --max_grad_norm=1 \
-  --output_dir="sd-pokemon-model"
-```
-
 ### Training with xFormers:
+
+```bash
+pip install xformers
+```
 
 You can enable memory efficient attention by [installing xFormers](https://huggingface.co/docs/diffusers/main/en/optimization/xformers) and passing the `--enable_xformers_memory_efficient_attention` argument to the script.
 
