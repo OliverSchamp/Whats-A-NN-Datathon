@@ -15,8 +15,8 @@ fakedetection_scores = pd.read_csv('fake_sorted.csv')
 
 #csv already sorted from highest to lowest scores, so all we do is slice it
 NUM_IMAGES = 500
-fakedetection_top = fakedetection_scores.iloc[:NUM_IMAGES, :] #harddetect
-# fakedetection_top = fakedetection_scores.iloc[-NUM_IMAGES:, :] #easydetect
+# fakedetection_top = fakedetection_scores.iloc[:NUM_IMAGES, :] #harddetect
+fakedetection_top = fakedetection_scores.iloc[-NUM_IMAGES:, :] #easydetect
 
 def return_id_fromfile(file_path):
   slist = [*file_path]
@@ -58,11 +58,12 @@ metadata = pd.DataFrame({'file_name': pd.Series(dtype='str'),
 # histograms = pd.DataFrame({'artwork': pd.Series(dtype='str'), 'model': pd.Series(dtype='str'),
 #                          'histogram': pd.Series(dtype='int')})
 
-folder = "harddetect-500/" #directory in which to save your image data
+folder = "ezdetect-500-nowatermark/" #directory in which to save your image data
 
 for i, url in zip(data['id'], data['image_url']):
-  response = requests.get(url)
-  image = Image.open(io.BytesIO(response.content))
+  # response = requests.get(url)
+  # image = Image.open(io.BytesIO(response.content))
+  image = Image.open("real/" + str(i) + ".png")
   fname = str(i) + ".png"
   image.save(folder + fname,"PNG")
   #add a row to the dataframe

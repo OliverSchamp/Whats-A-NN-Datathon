@@ -45,11 +45,12 @@ device = "cuda"
 pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16)
 pipe = pipe.to(device)
 
-def original_generate(prompt):
-    # return pipe(prompt).images[0]
+def original_generate(prompt, seed):
+    generator = torch.Generator("cuda").manual_seed(seed)
+    return pipe(prompt, generator=generator).images[0]
     #faster generation
-    generator = torch.Generator("cuda").manual_seed(1024)
-    return pipe(prompt, num_inference_steps=15, generator=generator).images[0]
+    # generator = torch.Generator("cuda").manual_seed(1024)
+    # return pipe(prompt, num_inference_steps=15, generator=generator).images[0]
 
 # ----------------------------------
 
@@ -69,14 +70,17 @@ def original_generate(prompt):
 #Histogram code
 import pandas as pd
 
-art_name = "Starry Night"
+art_name = "How to Bake a Cake"
 
 artists = pd.read_parquet('https://kuleuven-datathon-2023.s3.eu-central-1.amazonaws.com/data/Artist.parquet.gzip')
 
 #make a list of say, 50 artists, but they have to comprise out of 16 famous ones
 
 #grid of 9 artists
-famous_artists = ['Vincent Van Gogh', 'Claude Oscar Monet', 'Rembrandt Van Rijn', 'Michelangelo Buonarroti', 'Salvador Dali', 'Leonardo Da Vinci', 'Henri Matisse', 'Pablo Picasso', 'Jackson Pollock']
+#famous_artists = ['Vincent Van Gogh', 'Claude Oscar Monet', 'Rembrandt Van Rijn', 'Michelangelo Buonarroti', 'Salvador Dali', 'Leonardo Da Vinci', 'Henri Matisse', 'Pablo Picasso', 'Jackson Pollock']
+
+#random names
+famous_artists = ['Bob', 'Dave', 'Sam', 'Charles', 'Oliver', 'Sean', 'Tom', 'Joe', 'Guy']
 
 artist_list = pd.unique(artists['name'])
 
@@ -99,11 +103,17 @@ hist1 = np.zeros(9)
 first_9_famousartists = []
 first_9_prompts = []
 first_9_classes = []
+seed = 42
 for i, prompt in enumerate(prompts):
     print("Iteration: ", i+1)
 
-    image1 = original_generate(prompt)
+    image1 = original_generate(prompt, seed)
     # image2 = finetuned_generate(prompt)
+
+    #solving the NSFW issue
+    while np.array(image1).mean() == 0:
+        seed = seed + 1
+        image1 = original_generate(prompt, seed)
 
     class1 = vit_classify(image1)
     # class2 = vit_classify(image2)
