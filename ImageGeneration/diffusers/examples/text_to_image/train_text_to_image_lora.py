@@ -378,6 +378,7 @@ def main():
         if not is_wandb_available():
             raise ImportError("Make sure to install wandb if you want to use it for logging during training.")
         import wandb
+        wandb.init(dir= r"C:\Users\OliverSchamp\Documents\wandb_logs")
 
     # Make one log on every process with the configuration for debugging.
     logging.basicConfig(
@@ -776,6 +777,7 @@ def main():
                 break
 
         if accelerator.is_main_process:
+            # print('SKIPPING IMAGE GENERATION')
             if args.validation_prompt is not None and epoch % args.validation_epochs == 0:
                 logger.info(
                     f"Running validation... \n Generating {args.num_validation_images} images with prompt:"
@@ -840,11 +842,10 @@ def main():
         args.pretrained_model_name_or_path, revision=args.revision, torch_dtype=weight_dtype
     )
 
-    pipeline.save_pretrained(args.output_dir)
-    print('MODEL SAVED')
+    # pipeline.save_pretrained(args.output_dir)
+    # print('MODEL SAVED')
 
     pipeline = pipeline.to(accelerator.device)
-
     # load attention processors
     pipeline.unet.load_attn_procs(args.output_dir)
 

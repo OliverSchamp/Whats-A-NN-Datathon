@@ -58,31 +58,32 @@ pipe_ft.to("cuda")
 
 def finetuned_generate(prompt, seed):
     generator = torch.Generator("cuda").manual_seed(seed)
-    return pipe_ft(prompt, generator=generator).images[0]
-    #faster generation
-    # return pipe_ft(prompt, num_inference_steps=15, generator=generator).images[0]
+    # return pipe_ft(prompt, generator=generator).images[0]
+    # faster generation
+    return pipe_ft(prompt, num_inference_steps=50, generator=generator).images[0]
 
 # ---------------------------------------------
 #Histogram code
 import pandas as pd
 
-art_name = "How to Bake a Cake"
+art_name = "A Samurai eating a wheel of cheese"
 
 artists = pd.read_parquet('https://kuleuven-datathon-2023.s3.eu-central-1.amazonaws.com/data/Artist.parquet.gzip')
 
 #make a list of say, 50 artists, but they have to comprise out of 16 famous ones
 
 #grid of 9 artists
-#famous_artists = ['Vincent Van Gogh', 'Claude Oscar Monet', 'Rembrandt Van Rijn', 'Michelangelo Buonarroti', 'Salvador Dali', 'Leonardo Da Vinci', 'Henri Matisse', 'Pablo Picasso', 'Jackson Pollock']
+famous_artists = ['Vincent Van Gogh', 'Claude Oscar Monet', 'Rembrandt Van Rijn', 'Michelangelo Buonarroti', 'Salvador Dali', 'Leonardo Da Vinci', 'Henri Matisse', 'Pablo Picasso', 'Jackson Pollock']
 
 #random names
-famous_artists = ['Bob', 'Dave', 'Sam', 'Charles', 'Oliver', 'Sean', 'Tom', 'Joe', 'Guy']
+# famous_artists = ['Bob', 'Dave', 'Sam', 'Charles', 'Oliver', 'Sean', 'Tom', 'Joe', 'Guy']
 
 artist_list = pd.unique(artists['name'])
 
 #sample an artist from artist list, if not already in artist-list, add them to the list
+L = 9
 artist_list_withfamous = famous_artists
-while len(artist_list_withfamous) < 50:
+while len(artist_list_withfamous) < L:
     randomartist = np.random.choice(artist_list)
     if randomartist not in artist_list_withfamous:
         artist_list_withfamous.append(randomartist)
@@ -92,14 +93,14 @@ for artist in artist_list_withfamous:
     p = art_name + " by " + artist
     prompts.append(p)
 
-prompts = prompts[:9]
+prompts = prompts[:L]
 # hist1 = np.zeros(9)
 hist2 = np.zeros(9)
 
 first_9_famousartists = []
 first_9_prompts = []
 first_9_classes = []
-seed = 42
+seed = 21
 for i, prompt in enumerate(prompts):
     print("Iteration: ", i+1)
 

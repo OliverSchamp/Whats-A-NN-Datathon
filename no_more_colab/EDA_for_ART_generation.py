@@ -47,11 +47,11 @@ def finetuned_generate(prompt, seed):
 #     image.save("images/" + str(i)+"_"+str(j)+".png")
 
 #replace images with the artworks we fine-tuned on using a copy of the metadata file
-dff = pd.read_csv('metadata_ezdetect100.csv')
+dff = pd.read_csv('to_generate.csv')
 
 for i in range(dff.shape[0]):
   seed = np.random.randint(0, 10000)
-  prompt = dff['text'].iloc[i]
+  prompt = dff['prompts'].iloc[i]
   print(prompt)
   image = finetuned_generate(prompt, seed)
 
@@ -60,4 +60,4 @@ for i in range(dff.shape[0]):
     seed = seed + 1
     image = finetuned_generate(prompt, seed)
 
-  image.save("images/" + dff['file_name'].iloc[i])
+  image.save("generated_fine-tuned/" + str(dff['source_artwork'].iloc[i]) + ".png", "PNG")
